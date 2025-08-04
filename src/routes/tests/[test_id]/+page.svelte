@@ -2,7 +2,6 @@
 	import Header from './Header.svelte';
 
 	let { data } = $props();
-	console.log(data);
 </script>
 
 <div class="flex flex-col items-center p-4">

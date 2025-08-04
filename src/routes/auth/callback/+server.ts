@@ -8,7 +8,6 @@ export const GET = async ({ url, locals: { supabase } }) => {
         const { data, error } = await supabase.auth.exchangeCodeForSession(code)
         if (!error) {
 
-            console.log('Successfully exchanged code for session:', data)
             redirect(303, `/${next.slice(1)}`)
         }
 

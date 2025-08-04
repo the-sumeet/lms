@@ -1,6 +1,5 @@
 <script>
 	let { test } = $props();
-	console.log(test);
 </script>
 
 <a href="/tests/{test.test.id}/take/{test.id}" class="flex flex-col gap-1 rounded-xl p-4 shadow-sm border border-gray-200">
