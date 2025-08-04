@@ -1,0 +1,101 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Question {
+  id          String       @id @default(cuid())
+  title       String
+  content     String
+  contentType String @default("text") 
+  type        String
+  points      Float        @default(1.0)
+  
+  // Correct answers stored as JSON
+  correctAnswer Json
+  
+  // For MCQ questions - store options as JSON array
+  options     Json?
+  
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  // Many-to-many with tests
+  testQuestions TestQuestion[]
+  answers       Answer[]
+
+  @@map("question")
+}
+
+model Test {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  duration    Int?     // Duration in minutes
+  totalPoints Float    @default(0)
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Many-to-many with questions
+  testQuestions TestQuestion[]
+  userTests     UserTest[]
+
+  @@map("test")
+}
+
+model TestQuestion {
+  id         String @id @default(cuid())
+  testId     String
+  questionId String
+  order      Int    @default(0)
+
+  test     Test     @relation(fields: [testId], references: [id], onDelete: Cascade)
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([testId, questionId])
+  @@map("test_question")
+}
+
+model UserTest {
+  id          String    @id @default(cuid())
+  userEmail      String
+  testId      String
+  startedAt   DateTime  @default(now())
+  submittedAt DateTime?
+  score       Float?
+  totalPoints Float     @default(0)
+  isCompleted Boolean   @default(false)
+
+  test    Test     @relation(fields: [testId], references: [id], onDelete: Cascade)
+  answers Answer[]
+
+  @@map("user_test")
+}
+
+model Answer {
+  id         String   @id @default(cuid())
+  userTestId String
+  questionId String
+  answer     Json     // Store answer as JSON to handle different question types
+  isCorrect  Boolean?
+  points     Float    @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  userTest UserTest @relation(fields: [userTestId], references: [id], onDelete: Cascade)
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([userTestId, questionId])
+  @@map("answer")
+}
