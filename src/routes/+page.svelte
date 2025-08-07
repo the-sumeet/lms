@@ -2,20 +2,17 @@
 	let mobileMenu = $state(false);
 </script>
 
+
 <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
 <div class="bg-white">
 	<!-- Header -->
-	<header class="absolute inset-x-0 top-0 z-50">
+	<header class="absolute inset-x-0 top-0 z-50 bg-white/60 backdrop-blur">
 		<nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
 			<div class="flex lg:flex-1">
 				<a href="#" class="-m-1.5 p-1.5">
 					<span class="sr-only">Your Company</span>
-					<img
-						src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-						alt=""
-						class="h-8 w-auto"
-					/>
+					<img src="niyogiias_logo.png" alt="" class="h-8 w-auto" />
 				</a>
 			</div>
 			<div class="flex lg:hidden">
@@ -43,10 +40,9 @@
 				</button>
 			</div>
 			<div class="hidden lg:flex lg:gap-x-12">
-				<a href="#" class="text-sm/6 font-semibold text-gray-900">Product</a>
-				<a href="#" class="text-sm/6 font-semibold text-gray-900">Features</a>
-				<a href="#" class="text-sm/6 font-semibold text-gray-900">Marketplace</a>
-				<a href="#" class="text-sm/6 font-semibold text-gray-900">Company</a>
+				<a href="#pricing" class="text-sm/6 font-semibold text-gray-900">Pricing</a>
+				<a href="#features" class="text-sm/6 font-semibold text-gray-900">Features</a>
+				<a href="#contact" class="text-sm/6 font-semibold text-gray-900">Contact</a>
 			</div>
 			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
 				<a href="/login" class="text-sm/6 font-semibold text-gray-900"
@@ -67,11 +63,7 @@
 					<div class="flex items-center justify-between">
 						<a href="#" class="-m-1.5 p-1.5">
 							<span class="sr-only">Your Company</span>
-							<img
-								src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-								alt=""
-								class="h-8 w-auto"
-							/>
+							<img src="niyogiias_logo.png" alt="" class="h-8 w-auto" />
 						</a>
 						<button
 							onclick={() => (mobileMenu = false)}
@@ -96,24 +88,19 @@
 						<div class="-my-6 divide-y divide-gray-500/10">
 							<div class="space-y-2 py-6">
 								<a
-									href="#"
+									href="#pricing"
 									class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-									>Product</a
+									>Pricing</a
 								>
 								<a
-									href="#"
+									href="#features"
 									class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
 									>Features</a
 								>
 								<a
-									href="#"
+									href="#contact"
 									class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-									>Marketplace</a
-								>
-								<a
-									href="#"
-									class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-									>Company</a
+									>Contact</a
 								>
 							</div>
 							<div class="py-6">
@@ -148,11 +135,11 @@
 						<h1
 							class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl"
 						>
-							Deploy to the cloud with confidence
+							Crack India's Toughest Exams with Confidence
 						</h1>
 						<p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-							Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-							commodo. Elit sunt amet fugiat veniam occaecat.
+							Structured courses, expert guidance, mock tests, and personalized mentorship for UPSC,
+							State PCS, and other top exams.
 						</p>
 						<div class="mt-10 flex items-center justify-center gap-x-6">
 							<a
@@ -165,7 +152,7 @@
 							>
 						</div>
 					</div>
-					<div class="mt-16 flow-root sm:mt-24">
+					<!-- <div class="mt-16 flow-root sm:mt-24">
 						<div
 							class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-gray-900/10 ring-inset lg:-m-4 lg:rounded-2xl lg:p-4"
 						>
@@ -177,7 +164,7 @@
 								class="rounded-md shadow-2xl ring-1 ring-gray-900/10"
 							/>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div
@@ -248,17 +235,16 @@
 		</div>
 
 		<!-- Feature section -->
-		<div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
+		<div id="features" class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
 			<div class="mx-auto max-w-2xl lg:text-center">
-				<h2 class="text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
+				<h2 class="text-base/7 font-semibold text-indigo-600">Features</h2>
 				<p
 					class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance"
 				>
-					Everything you need to deploy your app
+					Why choose us?
 				</p>
 				<p class="mt-6 text-lg/8 text-pretty text-gray-600">
-					Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas
-					a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.
+					With our learner-centric approach, we aim to build India’s next generation of bureaucrats.
 				</p>
 			</div>
 			<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -270,27 +256,12 @@
 							<div
 								class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600"
 							>
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="1.5"
-									data-slot="icon"
-									aria-hidden="true"
-									class="size-6 text-white"
-								>
-									<path
-										d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</svg>
+								<i class="bi bi-camera-reels text-xl text-white"></i>
 							</div>
-							Push to deploy
+							📃 Online Video Lectures
 						</dt>
 						<dd class="mt-2 text-base/7 text-gray-600">
-							Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio
-							urna massa nunc massa.
+							Comprehensive recorded & live sessions led by experienced faculty
 						</dd>
 					</div>
 					<div class="relative pl-16">
@@ -298,27 +269,12 @@
 							<div
 								class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600"
 							>
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="1.5"
-									data-slot="icon"
-									aria-hidden="true"
-									class="size-6 text-white"
-								>
-									<path
-										d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</svg>
+								<i class="bi bi-journal-check text-xl text-white"></i>
 							</div>
-							SSL certificates
+							🔢 Test Series
 						</dt>
 						<dd class="mt-2 text-base/7 text-gray-600">
-							Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales
-							gravida quam turpis enim lacus amet.
+							UPSC & State PCS pattern-based mocks for Prelims & Mains
 						</dd>
 					</div>
 					<div class="relative pl-16">
@@ -326,27 +282,12 @@
 							<div
 								class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600"
 							>
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="1.5"
-									data-slot="icon"
-									aria-hidden="true"
-									class="size-6 text-white"
-								>
-									<path
-										d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</svg>
+								<i class="bi bi-pencil text-xl text-white"></i>
 							</div>
-							Simple queues
+							🖊️ Mains Answer Writing
 						</dt>
 						<dd class="mt-2 text-base/7 text-gray-600">
-							Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor
-							congue commodo diam neque.
+							Daily & weekly writing practice with feedback
 						</dd>
 					</div>
 					<div class="relative pl-16">
@@ -354,27 +295,25 @@
 							<div
 								class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600"
 							>
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="1.5"
-									data-slot="icon"
-									aria-hidden="true"
-									class="size-6 text-white"
-								>
-									<path
-										d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</svg>
+								<i class="bi bi-graph-up text-xl text-white"></i>
 							</div>
-							Advanced security
+							✏️ PYQs & Analysis
 						</dt>
 						<dd class="mt-2 text-base/7 text-gray-600">
-							Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id
-							hac maecenas ac donec pharetra eget.
+							Subject-wise & topic-wise Previous Year Questions
+						</dd>
+					</div>
+					<div class="relative pl-16">
+						<dt class="text-base/7 font-semibold text-gray-900">
+							<div
+								class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600"
+							>
+								<i class="bi bi-clipboard2-check text-xl text-white"></i>
+							</div>
+							🤝 Mock Interview Preparation
+						</dt>
+						<dd class="mt-2 text-base/7 text-gray-600">
+							DAF analysis, panel sessions & personality development
 						</dd>
 					</div>
 				</dl>
@@ -408,22 +347,16 @@
 					></div>
 				</div>
 				<div class="relative mx-auto max-w-2xl lg:mx-0">
-					<img
-						src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-white.svg"
-						alt=""
-						class="h-12 w-auto"
-					/>
 					<figure>
 						<blockquote class="mt-6 text-lg font-semibold text-white sm:text-xl/8">
 							<p>
-								“Amet amet eget scelerisque tellus sit neque faucibus non eleifend. Integer eu
-								praesent at a. Ornare arcu gravida natoque erat et cursus tortor consequat at.
-								Vulputate gravida sociis enim nullam ultricies habitant malesuada lorem ac.”
+								"The comprehensive study materials and expert guidance helped me achieve AIR 15. The
+								mock tests were particularly helpful in time management"
 							</p>
 						</blockquote>
 						<figcaption class="mt-6 text-base text-white">
-							<div class="font-semibold">Judith Black</div>
-							<div class="mt-1">CEO of Tuple</div>
+							<div class="font-semibold">Priya Sharma</div>
+							<div class="mt-1">AIR 15, UPSC 2024</div>
 						</figcaption>
 					</figure>
 				</div>
@@ -431,7 +364,7 @@
 		</div>
 
 		<!-- Pricing section -->
-		<div class="py-24 sm:pt-48">
+		<div id="pricing" class="py-24 sm:pt-48">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="mx-auto max-w-2xl lg:text-center">
 					<h2 class="text-base/7 font-semibold text-indigo-600">Pricing</h2>
@@ -757,6 +690,176 @@
 			</div>
 		</div>
 
+		<!-- Contact -->
+		<div id="contact" class="relative isolate bg-white">
+			<div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+				<div class="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:px-8 lg:py-48">
+					<div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+						<h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+							Get in touch
+						</h2>
+						<p class="mt-6 text-lg/8 text-gray-600">
+							If you have any questions or need further information, feel free to reach out to us,
+							or drop a message.
+						</p>
+						<dl class="mt-10 space-y-4 text-base/7 text-gray-600">
+							<div class="flex gap-x-4">
+								<dt class="flex-none">
+									<span class="sr-only">Address</span>
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.5"
+										data-slot="icon"
+										aria-hidden="true"
+										class="h-7 w-6 text-gray-400"
+									>
+										<path
+											d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</dt>
+								<dd>
+									Niyogi EdTech, Bunglow no. 3, Lane 33B, <br />DSK Chowk, Dhayari, Pune - 411041
+								</dd>
+							</div>
+							<div class="flex gap-x-4">
+								<dt class="flex-none">
+									<span class="sr-only">Telephone</span>
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.5"
+										data-slot="icon"
+										aria-hidden="true"
+										class="h-7 w-6 text-gray-400"
+									>
+										<path
+											d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</dt>
+								<dd>
+									<a href="tel:+919527744277" class="hover:text-gray-900">+919527744277</a>
+								</dd>
+							</div>
+							<div class="flex gap-x-4">
+								<dt class="flex-none">
+									<span class="sr-only">Email</span>
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.5"
+										data-slot="icon"
+										aria-hidden="true"
+										class="h-7 w-6 text-gray-400"
+									>
+										<path
+											d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</dt>
+								<dd>
+									<a href="mailto:contact@niyogiias.com" class="hover:text-gray-900"
+										>contact@niyogiias.com</a
+									>
+								</dd>
+							</div>
+						</dl>
+					</div>
+				</div>
+				<form action="#" method="POST" class="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48">
+					<div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+						<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+							<div>
+								<label for="first-name" class="block text-sm/6 font-semibold text-gray-900"
+									>First name</label
+								>
+								<div class="mt-2.5">
+									<input
+										id="first-name"
+										type="text"
+										name="first-name"
+										autocomplete="given-name"
+										class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+									/>
+								</div>
+							</div>
+							<div>
+								<label for="last-name" class="block text-sm/6 font-semibold text-gray-900"
+									>Last name</label
+								>
+								<div class="mt-2.5">
+									<input
+										id="last-name"
+										type="text"
+										name="last-name"
+										autocomplete="family-name"
+										class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+									/>
+								</div>
+							</div>
+							<div class="sm:col-span-2">
+								<label for="email" class="block text-sm/6 font-semibold text-gray-900">Email</label>
+								<div class="mt-2.5">
+									<input
+										id="email"
+										type="email"
+										name="email"
+										autocomplete="email"
+										class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+									/>
+								</div>
+							</div>
+							<div class="sm:col-span-2">
+								<label for="phone-number" class="block text-sm/6 font-semibold text-gray-900"
+									>Phone number</label
+								>
+								<div class="mt-2.5">
+									<input
+										id="phone-number"
+										type="tel"
+										name="phone-number"
+										autocomplete="tel"
+										class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+									/>
+								</div>
+							</div>
+							<div class="sm:col-span-2">
+								<label for="message" class="block text-sm/6 font-semibold text-gray-900"
+									>Message</label
+								>
+								<div class="mt-2.5">
+									<textarea
+										id="message"
+										name="message"
+										rows="4"
+										class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+									></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="mt-8 flex justify-end">
+							<button
+								type="submit"
+								class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+								>Send message</button
+							>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
 		<!-- FAQs -->
 		<div class="mx-auto max-w-2xl px-6 pb-8 sm:pt-12 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pb-32">
 			<h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
@@ -882,11 +985,7 @@
 	<footer class="relative mx-auto mt-32 max-w-7xl px-6 lg:px-8">
 		<div class="border-t border-gray-900/10 py-16 sm:py-24 lg:py-32">
 			<div class="xl:grid xl:grid-cols-3 xl:gap-8">
-				<img
-					src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-					alt="Company name"
-					class="h-9"
-				/>
+				<img src="niyogiias_logo.png" alt="Company name" class="h-9" />
 				<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
 					<div class="md:grid md:grid-cols-2 md:gap-8">
 						<div>
