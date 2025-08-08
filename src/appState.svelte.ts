@@ -1,6 +1,7 @@
 
 
 
-export const appState = {
+export const appState = $state({
     mobileSidebarOpened: false,
-}
+})
+

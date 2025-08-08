@@ -1,20 +1,22 @@
 <script>
 	let { user } = $props();
+  import { appState } from "../../appState.svelte";
 </script>
 
 <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-<nav class="bg-gray-800">
+<nav class="bg-pink-500 text-white">
 	<div class="max-w-7xl px-4">
 		<div class="flex h-16 justify-between">
 			<div class="flex">
 				<div class="mr-2 -ml-2 flex items-center md:hidden">
 					<!-- Mobile menu button -->
 					<button
+            onclick={() => appState.mobileSidebarOpened = !appState.mobileSidebarOpened}
 						type="button"
 						command="--toggle"
 						commandfor="mobile-menu"
-						class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+						class="relative inline-flex items-center justify-center rounded-md p-2 "
 					>
 						<span class="absolute -inset-0.5"></span>
 						<span class="sr-only">Open main menu</span>
@@ -48,9 +50,9 @@
 				</div>
 				<div class="flex shrink-0 items-center">
 					<img
-						src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+						src="/niyogiias_logo.png"
 						alt="Your Company"
-						class="h-8 w-auto"
+						class="bg-white p-1 rounded h-8 w-auto"
 					/>
 				</div>
 				<div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
@@ -78,7 +80,7 @@
 				</div>
 			</div>
 			<div class="flex items-center">
-				<div class="shrink-0">
+				<!-- <div class="shrink-0">
 					<button
 						type="button"
 						class="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
@@ -96,7 +98,7 @@
 						</svg>
 						New Job
 					</button>
-				</div>
+				</div> -->
 				<div class="hidden md:ml-4 md:flex md:shrink-0 md:items-center">
 					<button
 						type="button"
