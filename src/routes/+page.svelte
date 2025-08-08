@@ -1,5 +1,12 @@
 <script>
+	import { enhance } from '$app/forms';
+	
 	let mobileMenu = $state(false);
+	let formSubmitting = $state(false);
+	let showSuccess = $state(false);
+	let showError = $state(false);
+	let errorMessage = $state('');
+	let {form} = $props();
 </script>
 
 
@@ -777,8 +784,84 @@
 						</dl>
 					</div>
 				</div>
-				<form action="#" method="POST" class="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48">
+				<form 
+					id="contact-form"
+					action="?/contact" 
+					method="POST" 
+					class="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48"
+					use:enhance={() => {
+						formSubmitting = true;
+						showSuccess = false;
+						showError = false;
+						return async ({ result, update }) => {
+							formSubmitting = false;
+							if (result.type === 'success') {
+								showSuccess = true;
+								document.getElementById('contact-form')?.reset();
+							} else if (result.type === 'failure') {
+								showError = true;
+								errorMessage = result.data?.error || 'An error occurred';
+							}
+							await update();
+						};
+					}}
+				>
 					<div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+						<!-- Success message -->
+						{#if showSuccess}
+							<div class="mb-6 rounded-md bg-green-50 p-4">
+								<div class="flex">
+									<div class="flex-shrink-0">
+										<svg class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+										</svg>
+									</div>
+									<div class="ml-3">
+										<p class="text-sm font-medium text-green-800">
+											{form?.message || 'Thank you for your message! We will get back to you soon.'}
+										</p>
+									</div>
+									<div class="ml-auto pl-3">
+										<div class="-mx-1.5 -my-1.5">
+											<button type="button" class="inline-flex rounded-md bg-green-50 p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-green-50" onclick={() => showSuccess = false}>
+												<span class="sr-only">Dismiss</span>
+												<svg class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+													<path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						{/if}
+						
+						<!-- Error message -->
+						{#if showError || form?.error}
+							<div class="mb-6 rounded-md bg-red-50 p-4">
+								<div class="flex">
+									<div class="flex-shrink-0">
+										<svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+										</svg>
+									</div>
+									<div class="ml-3">
+										<p class="text-sm font-medium text-red-800">
+											{form?.error || errorMessage}
+										</p>
+									</div>
+									<div class="ml-auto pl-3">
+										<div class="-mx-1.5 -my-1.5">
+											<button type="button" class="inline-flex rounded-md bg-red-50 p-1.5 text-red-500 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-red-50" onclick={() => showError = false}>
+												<span class="sr-only">Dismiss</span>
+												<svg class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+													<path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						{/if}
 						<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 							<div>
 								<label for="first-name" class="block text-sm/6 font-semibold text-gray-900"
@@ -851,9 +934,19 @@
 						<div class="mt-8 flex justify-end">
 							<button
 								type="submit"
-								class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-								>Send message</button
+								disabled={formSubmitting}
+								class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
 							>
+								{#if formSubmitting}
+									<svg class="animate-spin h-4 w-4" viewBox="0 0 24 24">
+										<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"></circle>
+										<path fill="currentColor" opacity="0.75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+									</svg>
+									Sending...
+								{:else}
+									Send message
+								{/if}
+							</button>
 						</div>
 					</div>
 				</form>

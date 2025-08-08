@@ -42,9 +42,11 @@
 		"@supabase/auth-ui-shared": "^0.1.8",
 		"@supabase/ssr": "^0.6.1",
 		"@supabase/supabase-js": "^2.50.2",
+		"@types/nodemailer": "^6.4.17",
 		"bootstrap-icons": "^1.13.1",
 		"chart.js": "^4.5.0",
 		"chartjs-adapter-date-fns": "^3.0.0",
+		"nodemailer": "^7.0.5",
 		"prisma": "^6.13.0"
 	}
 }
