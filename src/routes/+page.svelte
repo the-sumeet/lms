@@ -50,6 +50,7 @@
 				<a href="#pricing" class="text-sm/6 font-semibold text-gray-900">Pricing</a>
 				<a href="#features" class="text-sm/6 font-semibold text-gray-900">Features</a>
 				<a href="#contact" class="text-sm/6 font-semibold text-gray-900">Contact</a>
+				<a href="/home" class="text-sm/6 font-semibold text-gray-900">Courses</a>
 			</div>
 			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
 				<a href="/login" class="text-sm/6 font-semibold text-gray-900"
@@ -65,7 +66,7 @@
 
 				<!-- Mobile menu panel -->
 				<div
-					class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+					class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 h-screen"
 				>
 					<div class="flex items-center justify-between">
 						<a href="#" class="-m-1.5 p-1.5">
@@ -91,30 +92,18 @@
 							</svg>
 						</button>
 					</div>
-					<div class="mt-6 flow-root">
-						<div class="-my-6 divide-y divide-gray-500/10">
+					<div class="mt-6 flow-root h-full">
+						<div class="-my-6 divide-y divide-gray-500/10 h-full flex flex-col justify-between">
 							<div class="space-y-2 py-6">
 								<a
-									href="#pricing"
-									class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-									>Pricing</a
-								>
-								<a
-									href="#features"
-									class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-									>Features</a
-								>
-								<a
-									href="#contact"
-									class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-									>Contact</a
-								>
-							</div>
-							<div class="py-6">
-								<a
 									href="/login"
-									class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-									>Log in</a
+									class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+									>Login</a
+								>
+								<a
+									href="/courses"
+									class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+									>courses</a
 								>
 							</div>
 						</div>
