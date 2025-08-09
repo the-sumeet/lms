@@ -14,7 +14,7 @@
 	<div class="mt-4 flex w-full flex-col lg:max-w-7xl">
 		<!-- Courses -->
 		<div
-			class="flex w-full flex-col gap-4 rounded-xl border border-gray-200 bg-gradient-to-r from-pink-100 to-purple-100 p-4 shadow"
+			class="flex w-full flex-col gap-4 rounded-xl border border-gray-200 bg-gray-100 p-4 shadow-md"
 		>
 			<h1
 				class="w-fit bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-3xl font-bold text-transparent"
