@@ -20,7 +20,7 @@
 		<div class="p-2">
 			<button
 				type="button"
-				class="w-full btn-primary bg-gradient-clickable"
+				class="w-full px-3 py-2 text-base bg-gray-100 rounded text-pink-500 font-bold hover:bg-pink-100"
 				>Go to test</button
 			>
 		</div>
@@ -46,7 +46,7 @@
 		<div class="p-2">
 			<button
 				type="button"
-				class="w-full btn-primary bg-gradient-clickable"
+				class="w-full px-3 py-2 text-base bg-gray-100 rounded text-pink-500 font-bold hover:bg-pink-100"
 				>Go to test</button
 			>
 		</div>
@@ -72,7 +72,7 @@
 		<div class="p-2">
 			<button
 				type="button"
-				class="w-full btn-primary bg-gradient-clickable"
+				class="w-full px-3 py-2 text-base bg-gray-100 rounded text-pink-500 font-bold hover:bg-pink-100"
 				>Go to test</button
 			>
 		</div>

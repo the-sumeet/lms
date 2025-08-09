@@ -20,7 +20,7 @@
 					<li>
 						<!-- Current: "bg-gray-800 text-white", Default: "text-gray-400 hover:text-white hover:bg-gray-800" -->
 						<a
-							href="#"
+							href="/test-series"
 							class="group items-center flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<i class="bi bi-journal-text text-xl"></i>

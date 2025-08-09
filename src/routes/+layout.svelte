@@ -11,6 +11,7 @@
 </script>
 
 <svelte:head>
+	<title>NiyogiIAS</title>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
