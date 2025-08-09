@@ -2,7 +2,7 @@
 </script>
 
 <div
-	class="flex h-full grow flex-col gap-y-5 overflow-y-auto bg-gradient-to-b from-pink-500 to-purple-500 p-4 px-6"
+	class="flex h-full grow flex-col gap-y-5 overflow-y-auto bg-white p-4 px-6 border-r border-gray-200"
 >
 	<nav class="flex flex-1 flex-col">
 		<ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -21,21 +21,16 @@
 						<!-- Current: "bg-gray-800 text-white", Default: "text-gray-400 hover:text-white hover:bg-gray-800" -->
 						<a
 							href="#"
-							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-white backdrop-blur hover:bg-white/30"
+							class="group items-center flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<i class="bi bi-journal-text text-xl"></i>
 							Test Series
-							<span
-								aria-hidden="true"
-								class="ml-auto w-9 min-w-max rounded-full bg-white/30 px-2.5 py-0.5 text-center text-xs/5 font-medium whitespace-nowrap text-white ring-1 ring-gray-200 backdrop-blur ring-inset"
-								>5</span
-							>
 						</a>
 					</li>
 					<li>
 						<a
 							href="#"
-							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-white backdrop-blur hover:bg-white/30"
+							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<i class="bi bi-globe text-xl"></i>
 							Current Affairs
@@ -44,35 +39,25 @@
 					<li>
 						<a
 							href="#"
-							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-white backdrop-blur hover:bg-white/30"
+							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<i class="bi bi-book text-xl"></i>
 							Editorials
-							<span
-								aria-hidden="true"
-								class="ml-auto w-9 min-w-max rounded-full bg-white/30 px-2.5 py-0.5 text-center text-xs/5 font-medium whitespace-nowrap text-white ring-1 ring-gray-200 backdrop-blur ring-inset"
-								>5</span
-							>
 						</a>
 					</li>
 					<li>
 						<a
 							href="#"
-							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-white backdrop-blur hover:bg-white/30"
+							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<i class="bi bi-mortarboard text-xl"></i>
 							Free Material
-							<span
-								aria-hidden="true"
-								class="ml-auto w-9 min-w-max rounded-full bg-white/30 px-2.5 py-0.5 text-center text-xs/5 font-medium whitespace-nowrap text-white ring-1 ring-gray-200 backdrop-blur ring-inset"
-								>5</span
-							>
 						</a>
 					</li>
 					<li>
 						<a
 							href="/quicklinks"
-							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-white backdrop-blur hover:bg-white/30"
+							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<i class="bi bi-link-45deg text-xl"></i>
 							Quick Links
@@ -81,13 +66,13 @@
 				</ul>
 			</li>
 			<li>
-				<div class="text-xs/6 font-semibold text-gray-200">Exams</div>
+				<div class="text-xs/6 font-semibold text-pink-600">Exams</div>
 				<ul role="list" class="-mx-2 mt-2 space-y-1">
 					<li>
 						<!-- Current: "bg-gray-800 text-white", Default: "text-gray-400 hover:text-white hover:bg-gray-800" -->
 						<a
 							href="#"
-							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-white backdrop-blur hover:bg-white/30"
+							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<span class="truncate">UPSC</span>
 						</a>
@@ -96,7 +81,7 @@
 						<!-- Current: "bg-gray-800 text-white", Default: "text-gray-400 hover:text-white hover:bg-gray-800" -->
 						<a
 							href="#"
-							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-white backdrop-blur hover:bg-white/30"
+							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<span class="truncate">State PCS</span>
 						</a>
@@ -105,7 +90,7 @@
 						<!-- Current: "bg-gray-800 text-white", Default: "text-gray-400 hover:text-white hover:bg-gray-800" -->
 						<a
 							href="#"
-							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-white backdrop-blur hover:bg-white/30"
+							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<span class="truncate">Railway</span>
 						</a>
@@ -114,7 +99,7 @@
 						<!-- Current: "bg-gray-800 text-white", Default: "text-gray-400 hover:text-white hover:bg-gray-800" -->
 						<a
 							href="#"
-							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-white backdrop-blur hover:bg-white/30"
+							class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-800  hover:bg-gray-100 hover:text-pink-500"
 						>
 							<span class="truncate">Police Bharti</span>
 						</a>
