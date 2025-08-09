@@ -43,8 +43,11 @@ export const handle = async ({ event, resolve }) => {
      * new Set(['app', 'self']) or whatever your top-level path segments are, and
      * .has(event.url.pathname.split('/')[1])
      */
-    const auth_unprotected_paths = new Set(['', 'login', 'match', 'auth'])
-    if (!session && !auth_unprotected_paths.has(event.route.id?.split('/')[1] || '')) {
+    const auth_unprotected_paths = [/^$/, /^login/, /^match/, /^auth/, /^home/]
+    const routeSegment = event.route.id?.split('/')[1] || ''
+    const isUnprotected = auth_unprotected_paths.some(pattern => pattern.test(routeSegment))
+
+    if (!session && !isUnprotected) {
         if (event.url.pathname.startsWith('/api/')) {
             return json(
                 { error: 'Unauthorized' },
