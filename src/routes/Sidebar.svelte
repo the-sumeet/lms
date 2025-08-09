@@ -8,6 +8,15 @@
 		<ul role="list" class="flex flex-1 flex-col gap-y-7">
 			<li>
 				<ul role="list" class="-mx-2 space-y-1">
+					<li class="mb-4">
+						<div class="flex w-full bg-white shrink-0 items-center justify-center rounded p-1">
+							<img
+								src="/niyogiias_logo.png"
+								alt="Your Company"
+								class="h-12 w-auto rounded "
+							/>
+						</div>
+					</li>
 					<li>
 						<!-- Current: "bg-gray-800 text-white", Default: "text-gray-400 hover:text-white hover:bg-gray-800" -->
 						<a
